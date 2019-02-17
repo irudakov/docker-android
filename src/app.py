@@ -208,7 +208,7 @@ def run():
     else:
         cmd = 'emulator/emulator @{name} -gpu off -verbose {custom_args}'.format(name=avd_name, custom_args=custom_args)
     appium = convert_str_to_bool(str(os.getenv('APPIUM', False)))
-    logger.info('Emulator command: {cmd}')
+    logger.info('Emulator command: {emu_cmd}'.format(emu_cmd=cmd))
     if appium:
         subprocess.Popen(cmd.split())
         logger.info('Run appium server...')
