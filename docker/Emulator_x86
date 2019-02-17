@@ -57,10 +57,6 @@ RUN apt-get -qqy update && apt-get -qqy install --no-install-recommends \
     net-tools \
     ffmpeg \
     jq \
-    qemu-kvm \
-    libvirt-bin \
-    ubuntu-vm-builder \
-    bridge-utils \
  && rm -rf /var/lib/apt/lists/*
 
 #=======
