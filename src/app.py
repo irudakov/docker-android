@@ -90,7 +90,7 @@ def prepare_avd(device: str, avd_name: str):
 
     avd_path = '/'.join([ANDROID_HOME, 'android_emulator'])
     creation_cmd = 'avdmanager create avd -f -n {name} -b {img_type}/{sys_img} -k "system-images;android-{api_lvl};' \
-                   '{img_type};{sys_img}" -d {device} -p {path}'.format(name=avd_name, img_type=IMG_TYPE,
+                   '{img_type};{sys_img}" -d {device} -c 6000M -p {path}'.format(name=avd_name, img_type=IMG_TYPE,
                                                                         sys_img=SYS_IMG,
                                                                         api_lvl=API_LEVEL, device=device_name_bash,
                                                                         path=avd_path)
