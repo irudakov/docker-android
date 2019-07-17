@@ -76,7 +76,10 @@ def prepare_avd(device: str, avd_name: str):
     :param avd_name: Name of android virtual device / emulator
     """
 
-    device_name_bash = device.replace(' ', '_').lower()
+    if 'samsung' in device.lower():
+        device_name_bash = device.replace(' ','\ ')
+    else:
+        device_name_bash = device.replace(' ', '_').lower()
     skin_name = device.replace(' ', '_').lower()
 
     # For custom hardware profile
